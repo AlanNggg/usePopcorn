@@ -17,7 +17,7 @@ type StarRatingProps = {
   className?: string;
   messages?: string[];
   defaultRating?: number;
-  onSetRating: (rating: number) => void;
+  onSetRating: (rating: number | string) => void;
 };
 
 export default function StarRating({
