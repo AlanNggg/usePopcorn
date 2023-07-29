@@ -171,21 +171,6 @@ function Search({
     }
   });
 
-  useEffect(() => {
-    function callback(e: KeyboardEvent) {
-      if (document.activeElement === inputEl.current) return;
-      if (e.code === "Enter") {
-        if (inputEl.current) {
-          inputEl.current.focus();
-          setQuery("");
-        }
-      }
-    }
-
-    document.addEventListener("keydown", callback);
-    return () => document.removeEventListener("keydown", callback);
-  }, [setQuery]);
-
   return (
     <input
       className="search"
